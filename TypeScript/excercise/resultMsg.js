@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var welcomemodule_1 = require("./welcomemodule");
+var secondwelcomemodule_1 = require("./second/secondwelcomemodule");
+var greetingmessage = (0, welcomemodule_1.returnGreetingMsg)('welcomemodule');
+console.log(greetingmessage);
+var greeting = (0, secondwelcomemodule_1.returnGreetings)('second welcome module');
+console.log(greeting);
+var length = (0, secondwelcomemodule_1.getMsglength)('welocme welcome module');
+console.log(length);

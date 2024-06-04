@@ -1,0 +1,81 @@
+What is Typescript?
+-------------------
+Typescript --->Typed Superset of JavaScript
+Typescript --->object-oriented, static typing/Scripting,supports types, interfaces and optional parameters for function.
+
+
+JavaScript->Object based scripting language,dynamic typing/scripting, will not supports types, interfaces and optional parameters.
+
+When compiling Ts file, it will automatically create the Js file.
+
+Demo.ts
+
+tsc Demo.ts-> It will create Demo.js
+
+Type Annotation:
+----------------
+TS is typed language, where you can specify the type of variables,functions,parameters,properties specified with :Type 
+
+Syntax:
+<variableName>:<dataType>=<value>
+var age: number = 32; // number variable
+var name: string = "John";// string variable
+
+Variable can be declared with two ways:
+var-->function scope
+let-->block scope
+
+
+TS DataTypes:
+----------------
+number,string,boolean,array,tuple,enum,union,any,void.
+
+number:
+ TypeScript supports number data type. All numbers are stored as floating point numbers. These numbers can be Decimal (base 10), Hexadecimal (base 16) or Octal (base 8).
+
+String:
+String is another primitive data type that is used to store text data. String values are surrounded by single quotation marks or double quotation marks.
+
+Boolean:
+Boolean values are supported by both JavaScript and TypeScript and stored as true/false values.
+
+Arrays:
+An array is a special type of data type which can store multiple values of different data types sequentially using a special syntax.
+
+let fruits: string[] = ['Apple', 'Orange', 'Banana'];
+
+Tuples:
+TypeScript Introduced a new data type called Tuple.Tuple can contain two values of different data types.
+
+var empId: number = 1;
+var empName: string = "Steve";        
+
+// Tuple type variable 
+var employee: [number, string] = [1, "Steve"];
+Enum:
+
+Enums or enumerations are a new data type supported in TypeScript. Most object-oriented languages like Java and C# use enums. This is now available in TypeScript too.
+
+There are three types of enums:
+
+Numeric enum
+String enum
+Heterogeneous enum
+
+Union:
+Typescript allows us to use more than one data type for a variable or a function parameter.this is called union type.
+let code: (string | number);
+code = 123;   // OK
+code = "ABC"; // OK
+code = false; // Compiler Error
+
+
+TS Type inference 
+programming constructs.
+However, it is not mandatory to specify the type of a variable. TypeScript infers types of variables when there is no explicit information available in the form of type annotations.
+
+Function in typescript->
+NameFunction
+Function with parameters,
+anonymous function,
+optional parameter,default values to the parameter

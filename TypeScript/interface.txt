@@ -1,0 +1,61 @@
+interface mydata{ //represntating interface as type{
+    data1: number;
+    data2:String;
+}
+
+let md1:mydata={data1:1, data2:"Ram"};
+
+let md2:mydata={data1:1, data2:"Raj"};
+
+let md3:mydata={data2:"vasanth", data1:3};
+
+console.log(md3.data2);
+console.log(md3);
+---------------------------------------------------------
+
+
+interface IStudent
+{
+    (val:number,val1:number):void;
+}
+
+function calculate (val:number,val1:number):void{
+    let total :number=0;
+    total=val+val1;
+    console.log("The Total is: "+total);
+}
+
+function Rectangle(num1: number,num2: number):void{
+    console.log("The Rect Output is: "+(num1*num2));
+}
+
+let std:IStudent=calculate;
+std(5,6);
+
+std=Rectangle;
+-------------------------------------------------------
+//inheritting interface
+interface first{
+    data1:number;
+    data2:String;
+}
+
+interface second extends first{
+    data3:boolean;
+}
+interface third
+{
+    data4:any;
+}
+
+interface fourth extends first,second,third{
+
+}
+var data:fourth={
+    data1:10,
+    data2:"Ranjith",
+    data3:true,
+    data4:"End"
+};
+
+console.log(data);

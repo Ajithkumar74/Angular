@@ -1,0 +1,18 @@
+
+<div>
+  <h2>{{ heading }}</h2>
+
+  <div>
+    <h3>Event Binding</h3>
+    <button (click)="disable()">{{ name }}</button>
+    <div *ngIf="!showMessage">
+      <p>Hello There!</p>
+    </div>
+  </div>
+
+  <div>
+    <h3>Two Way Binding</h3>
+    <textarea [(ngModel)]="twoway"></textarea>
+    <p>{{ twoway }}</p>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div>
+  <h2>{{ title }}</h2>
+  <p>Bind Value using Interpolation</p>
+  <ul>
+    <li *ngFor="let car of carsList">
+    {{ car.carsBrand }}-{{ car.carsCountry }}
+  </li>
+</ul>
+  <br>
+  <p>Bind Value using interpolation along with necessary directive:
+  </p>
+
+  <ul>
+  <li *ngFor="let person of people" >
+    {{ person }}
+  </li>
+ </ul>
+
+ <p>Bind Value using interpolation along with necessary directive:</p>
+
+<ul>
+  <li *ngFor="let framework of frameworks" >
+    {{ framework }}
+  </li>
+ </ul>
+
+ <p>Bind Value to dropdown using interpolation along with necessary directive</p>
+ <select>
+  <option *ngFor="let car of carsList">{{ car.carsBrand }}</option>
+ </select>

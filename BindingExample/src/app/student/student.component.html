@@ -1,0 +1,18 @@
+<div>
+    <h2>{{ title }}</h2>
+  
+    <div>
+      <h2 [textContent]="title"></h2>
+    </div>
+  
+    <div>
+      <button class="button" (click)="changeTitle()">Change Title</button>
+      <p>Change Title: {{ title }} </p>
+    </div>
+    <div>
+        <label for="titleInput">Change Title:</label>
+        <input id="titleInput" type="text" [(ngModel)]="title" />
+      </div>
+      
+  </div>
+  

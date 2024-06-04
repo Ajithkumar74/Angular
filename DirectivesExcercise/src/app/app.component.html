@@ -1,0 +1,5 @@
+<div >
+<li *ngFor="let user of users" [ngStyle]="{ 'font-size.px': user.age }" [ngClass]="{'male':user.gender=='M','female':user.gender === 'F'}">
+    <a [href]="user.url" target="_blank">{{ user.label }}</a>
+</li>
+</div>
