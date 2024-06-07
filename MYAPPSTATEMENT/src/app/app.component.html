@@ -1,0 +1,6 @@
+<h2>Welcome to Angular</h2>
+<button (click)="onLoadEmployees()">Load Employees</button>
+<button (click)="onAddEmployees()">Add Employees</button>
+<div *ngFor="let e of employees | async">
+  {{e.id}}--{{e.name}}--{{e.dept}}--{{e.age}}
+</div>

@@ -1,0 +1,9 @@
+{
+    "employee":[
+        {"id":1,"name":"personA","dept":"Finanace","age":55},
+        {"id":2,"name":"personB","dept":"HR","age":57}, 
+        {"id":3,"name":"personG","dept":"ADMIN","age":45},
+        {"id":4,"name":"personF","dept":"IT","age":75},
+        {"id":5,"name":"personE","dept":"HOUSEKEEPING","age":35}
+    ]
+}
