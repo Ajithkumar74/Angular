@@ -26,6 +26,7 @@ export class AuthService {
   signup(user: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/signup`, user).pipe(
       tap((response: any) => {
+        console.log('Signup successful:', response);
         this.setToken(response.token);
       })
     );

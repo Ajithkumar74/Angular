@@ -1,31 +1,31 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Slide Navbar</title>
-</head>
-<body>
-	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
-
-			<div class="signup">
-				<form>
-					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" name="txt" placeholder="User name"  [(ngModel)]="username">
-					<input type="email" name="email" placeholder="Email" [(ngModel)]="email">
-					<input type="password" name="pswd" placeholder="Password" [(ngModel)]="password">
-					<button (click)="onSignUp()">Sign up</button>
-				</form>
-			</div>
-
-			<div class="login">
-				<form>
-					<label for="chk" aria-hidden="true">Login</label>
-					<input type="Username" name="Username" placeholder="Username" [(ngModel)]="username">
-					<input type="password" name="pswd" placeholder="Password" [(ngModel)]="password">
-					<button (click)="onLogin()">Login</button>
-				</form>
-			</div>
-	</div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+          <h1>Login</h1>
+          <form action="" method="POST"  (ngSubmit)="onLogin()">
+              <div class="txt_field">
+                  <input type="text" name="username"  [(ngModel)]="Username" required>
+                  <span></span>
+                  <label>Username</label>
+              </div>
+              <div class="txt_field">
+                  <input type="password" name="password" [(ngModel)]="Password" required>
+                  <span></span>
+                  <label>Password</label>
+              </div>
+              <div class="pass">Forget Password?</div>
+              <input name="submit" type="Submit" value="Login">
+              <div class="signup_link">
+                  Not a Member ? <a href="/signup">Signup</a>
+              </div>
+          </form>
+      </div>
+    </div>
+  </body>
 </html>
