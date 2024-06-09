@@ -1,0 +1,7 @@
+<p>investments works!</p>
+<ul>
+    <li *ngFor="let investment of investments" (click)="viewInvestmentDetail(investment.id)">
+      {{ investment.name }} - {{ investment.amount }}
+    </li>
+  </ul>
+  
