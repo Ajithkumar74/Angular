@@ -1,11 +1,9 @@
-/* General styling for the app container */
 .app-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
   
-  /* Styling for the header */
   .app-header {
     background-color: #0858a9;
     padding: 10px 0;
@@ -50,36 +48,15 @@
     color: #28a745;
   }
   
-  /* Styling for the main content area */
   .app-main {
     flex: 1;
     padding: 20px;
     background-color: #f7f7f7;
     text-align: center;
+
   }
   
-  /* Styling for the footer */
-  .app-footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
-  }
-  /* styles.css or any other global CSS file */
-
-.footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer p {
-  margin: 5px 0;
-}
+ 
 .h1{
   color: #28a745;
 }

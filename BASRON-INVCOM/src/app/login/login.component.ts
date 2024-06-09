@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, provideRouter } from '@angular/router';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,17 +12,34 @@ import { Router, provideRouter } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  username: string='';
-  password: string='';
+  username: string = '';
+  email: string = '';
+  password: string = '';
 
+  Username: string = '';
+  Password: string = '';
 
-  constructor(private router: Router){}
+  constructor(private authService: AuthService,private router: Router) { }
 
-  onSubmit(){
-    if(this.username==='test' && this.password === 'test'){
-      this.router.navigate(['/investments']);
-    }else{
-      alert('Invalid credentials');
-    }
+  onLogin() {
+    this.authService.login({ Username: this.Username, password: this.Password }).subscribe(response => {
+      console.log('Login successful:', response);
+    }, error => {
+      console.error('Login failed:', error);
+    });
   }
+    onSignUp() {
+      this.authService.signup({ username: this.username, email: this.email, password: this.password }).subscribe(response => {
+        console.log('Signup successful:', response);
+      }, error => {
+        console.error('Signup failed:', error);
+      });
+ 
+
+
 }
+}
+
+
+  
+
