@@ -23,7 +23,6 @@ import { AppRoutingModule } from '../app-routing/app-routing.module';
   standalone: true,
   imports: [HttpClientModule,
             CommonModule,
-            BrowserModule,
             AppRoutingModule,
             RouterModule,
             FormsModule,
