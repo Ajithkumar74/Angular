@@ -86,7 +86,7 @@ export class CustomerAppSignupComponent {
       response=>{
         console.log(response);
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Register successfully' });
-        this.router.navigate(['login'])
+        this.router.navigate(['auth'])
     },
       error=>
     {

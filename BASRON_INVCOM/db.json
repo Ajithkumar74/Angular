@@ -11,6 +11,42 @@
       "email": "asdfgh@gmail.com",
       "phone": "+919148627752",
       "password": "1234"
+    },
+    {
+      "id": "c31b",
+      "email": "atest@gmail.com",
+      "phone": "+919148627752",
+      "password": "1234"
+    },
+    {
+      "id": "6825",
+      "email": "test@gmail.com",
+      "phone": "+918906789454",
+      "password": "1256"
+    },
+    {
+      "id": "bc7c",
+      "email": "test1@gmail.com",
+      "phone": "+919789678956",
+      "password": "1235"
+    },
+    {
+      "id": "878f",
+      "email": "testn@gmail.com",
+      "phone": "+919343915327",
+      "password": "156"
+    },
+    {
+      "id": "c331",
+      "email": "ajithahh7@gmail.com",
+      "phone": "+916789678990",
+      "password": "1236"
+    },
+    {
+      "id": "daff",
+      "email": "ajitaj24190@gmail.com",
+      "phone": "+916789067890",
+      "password": "1256"
     }
   ]
 }

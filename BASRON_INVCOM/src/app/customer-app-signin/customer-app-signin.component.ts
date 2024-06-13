@@ -20,8 +20,17 @@ import { InputTextModule } from 'primeng/inputtext';
   styleUrl: './customer-app-signin.component.css'
 })
 export class CustomerAppSigninComponent {
+adminTo() {
+  this.router.navigate(['admin']);
+}
+customerTo() {
+  this.router.navigate(['customer']);
+
+}
+
   constructor(private router: Router ) { }
 
+  
   navigateToLogin(): void {
     this.router.navigate(['/login']);
   }

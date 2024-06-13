@@ -14,12 +14,12 @@ export class CustomerAppHomeComponent implements OnInit{
   
   ngOnInit(): void {
     setTimeout(()=>{
-      this.router.navigate(['/signin']);
+      this.router.navigate(['/customer']);
     },5000);
   }
 
   redirectToSignIn() {
-    this.router.navigate(['/signin']); // Assuming your signin component route is '/signin'
+    this.router.navigate(['/customer']); // Assuming your signin component route is '/signin'
   }
 
 }

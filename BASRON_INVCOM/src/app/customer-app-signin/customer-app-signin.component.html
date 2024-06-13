@@ -12,8 +12,8 @@
       <div class="subtitle">Welcome to</div>
       <div class="title">BASRON</div>
       <div class="tabs">
-        <div class="tab active">CUSTOMER LOGIN</div>
-        <div class="tab">ADMIN LOGIN</div>
+        <div class="tab active" (click)="customerTo()">CUSTOMER LOGIN</div>
+        <div class="tab"  (click)="adminTo()">ADMIN LOGIN</div>
       </div>
       <div class="form">
         <div class="login"(click)="navigateToLogin()" >
