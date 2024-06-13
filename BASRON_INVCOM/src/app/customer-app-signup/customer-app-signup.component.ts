@@ -11,9 +11,7 @@ import { AuthService } from '../services/auth.service';
 import { User } from '../interfaces/auth';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
+import {  HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 
 
@@ -30,21 +28,26 @@ import { AppRoutingModule } from '../app-routing/app-routing.module';
             ReactiveFormsModule,
             ButtonModule,ToastModule,
             CardModule,
-            BrowserAnimationsModule],
+            MatIconModule
+            ],
   templateUrl: './customer-app-signup.component.html',
   styleUrl: './customer-app-signup.component.css'
 })
 export class CustomerAppSignupComponent {
 
+
+
   registerForm = this.fb.group({
     email: ['',[Validators.required,Validators.email]],
-    phone: ['',[Validators.required, Validators.pattern("^\d{3}-\d{3}-\d{4}$")]],
+    phone: ['',[Validators.required, Validators.pattern('^\\+\\d{1,3}\\d{10}$')]],
     password: ['',Validators.required],
     repeatPassword: ['',Validators.required]
   },{
 
   validators: passwordMatchValidator
-  })
+  });
+  showPassword: boolean = false;
+  showRepeatPassword: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -67,12 +70,19 @@ export class CustomerAppSignupComponent {
   get repeatPassword() {
     return this.registerForm.controls['repeatPassword'];
   }
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+
+  toggleRepeatPasswordVisibility() {
+    this.showRepeatPassword = !this.showRepeatPassword;
+  }
 
   submitDetails(){
-    const postData = { ...this.registerForm.value };
 
-    delete postData.repeatPassword;
-    this.authService.registerUser(postData as unknown as User).subscribe(
+     const postData = { ...this.registerForm.value };
+     delete postData.repeatPassword;
+    this.authService.registerUser(postData as User).subscribe(
       response=>{
         console.log(response);
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Register successfully' });
@@ -88,13 +98,3 @@ export class CustomerAppSignupComponent {
  
 }
 
-
-
-
-
-// checkPasswords(group: FormGroup) {
-//   const password = group.get('password')!.value;
-//   const confirmPassword = group.get('repeatPassword')!.value;
-
-//   return password === confirmPassword ? null : { passwordMismatch: true };
-// }

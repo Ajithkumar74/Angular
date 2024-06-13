@@ -1,1 +1,16 @@
-{}
+{
+  "users": [
+    {
+      "id": "5ff9",
+      "email": "ajithrj23@gmail.com",
+      "phone": "8790678945",
+      "password": "12345"
+    },
+    {
+      "id": "dab9",
+      "email": "asdfgh@gmail.com",
+      "phone": "+919148627752",
+      "password": "1234"
+    }
+  ]
+}

@@ -62,13 +62,14 @@
                   width: 100%;
                   position: relative;
               }
-              .form .password-wrapper .toggle-password {
+              /* .form .password-wrapper .toggle-password {
                   position: absolute;
-                  right: 0;
+                  right: 10px;
                   cursor: pointer;
                   font-size: 1em;
-                  color: #7f5af0; /* Light blue icon color */
-              }
+                  transform: translateY(-50%);
+                  color: #7f5af0; /* Light blue icon color 
+              } */
               .form .forgot {
                   align-self: flex-end;
                   font-size: 0.8em;
@@ -94,4 +95,38 @@
                   color: #a6e22e; /* Green text color */
                   font-weight: bold;
               }
-    
+              .password-wrapper {
+                position: relative;
+              }
+             
+              .password-wrapper mat-icon {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: #6C63FF;
+              }
+              .country-code {
+                position: absolute;
+                width: 27px;
+                height: 18px;
+                left: 210px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: 'Overpass';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                color: #cccccc;
+              }
+              p-button:disabled {
+                background-color: grey !important;
+                cursor: not-allowed !important;
+              }
+              .phone-number {
+                width: 100%;
+                padding-left: 40px; /* To make space for the country code */
+              }
+              
