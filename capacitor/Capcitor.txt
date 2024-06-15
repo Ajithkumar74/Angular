@@ -65,6 +65,14 @@ npx cap sync android
 export default config;
 
 
+<<<<<<< HEAD
+=======
+npx cap sync android
+
+ng build --project=amz-app-ui 
+
+npm install @capacitor/android
+>>>>>>> 930009cb04a2cfacb18a5e263dae0d64c82fb140
 
 npx cap add android
 
