@@ -13,13 +13,20 @@ PS C:\Users\ajith\Capacitor\work-space\my-workspace> ng g library lib-funds-tran
 //
 
 
-
-
+--------------------------------------------------
+main command:
+--------------------------------------------------------
 PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace> ng new amz-app-wspace --no-create-application
 
-PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng g application amz-app-ui
+PS C:\Users\ajith\Capacitor\Work_Space> ng new basron-wspace --no-create-application 
+
 
 PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng g application amz-app-ui
+4
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng g application amz-app-ui
+
+ C:\Users\ajith\Capacitor\Work_Space\basron-wspace>ng g application basron-app-ui
+
 
 PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng g library uiux
 
@@ -30,7 +37,17 @@ PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-spa
 The package @capacitor/angular@2.0.3 will be installed and executed.
 Would you like to proceed? Yes
 
-PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng add @capacitor/angular --project=amz-app-ui 
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> 
+y
+
+PS C:\Users\ajith\Capacitor\Work_Space\basron-wspace>ng add @capacitor/angular --project=basron-app-ui
+
+ng build --project=basron-app-ui
+
+npm i @capacitor/android 
+
+
+add browser
 
 import type { CapacitorConfig } from '@capacitor/cli';
 
@@ -39,16 +56,15 @@ const config: CapacitorConfig = {
   appName: 'amz-app-ui',
   webDir: 'dist/amz-app-ui/browser'
 };
+npx cap sync android
+
+=>ng build --project=basron-app-ui
+
+
 
 export default config;
 
-add browser
 
-npx cap sync andriod
-
-ng build --project=amz-app-ui 
-
-npm install @capacitor/andriod
 
 npx cap add android
 
@@ -57,8 +73,34 @@ npx cap add android
 npx cap open android
 
 
-npm i @capacitor/camera --save
-
-
 after we write code when you modfiy code you need to build again
 ng build --project=amz-app-ui 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+<h1>Welcome 2 Angular App</h1>
+<button (click)="doToggle()">Do Toggle</button>
+<div ngIf="flag">
+{{title}}
+</div>
+</div>
+
+npm i @capacitor/camera --save
