@@ -1,0 +1,64 @@
+workspace:
+
+PS C:\Users\ajith\Capacitor\work-space> ng new my-workspace --create-application="false"
+// skip
+PS C:\Users\ajith\Capacitor\work-space\my-workspace> ng g application retail-bank-ui
+
+
+PS C:\Users\ajith\Capacitor\work-space\my-workspace> ng s
+
+PS C:\Users\ajith\Capacitor\work-space\my-workspace> ng g library lib-uiux
+
+PS C:\Users\ajith\Capacitor\work-space\my-workspace> ng g library lib-funds-transfer
+//
+
+
+
+
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace> ng new amz-app-wspace --no-create-application
+
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng g application amz-app-ui
+
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng g application amz-app-ui
+
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng g library uiux
+
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng g library dvc-camera
+
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng add @capacitor/angular
+
+The package @capacitor/angular@2.0.3 will be installed and executed.
+Would you like to proceed? Yes
+
+PS C:\Users\ajith\OneDrive - MSFT\Documents\Documents\Angular\capacitor\work-space\my-workspace\amz-app-wspace> ng add @capacitor/angular --project=amz-app-ui 
+
+import type { CapacitorConfig } from '@capacitor/cli';
+
+const config: CapacitorConfig = {
+  appId: 'com.virtusa.amzapp',
+  appName: 'amz-app-ui',
+  webDir: 'dist/amz-app-ui/browser'
+};
+
+export default config;
+
+add browser
+
+npx cap sync andriod
+
+ng build --project=amz-app-ui 
+
+npm install @capacitor/andriod
+
+npx cap add android
+
+npx cap add android
+
+npx cap open android
+
+
+npm i @capacitor/camera --save
+
+
+after we write code when you modfiy code you need to build again
+ng build --project=amz-app-ui 
