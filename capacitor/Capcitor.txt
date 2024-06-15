@@ -44,11 +44,11 @@ export default config;
 
 add browser
 
-npx cap sync andriod
+npx cap sync android
 
 ng build --project=amz-app-ui 
 
-npm install @capacitor/andriod
+npm install @capacitor/android
 
 npx cap add android
 
