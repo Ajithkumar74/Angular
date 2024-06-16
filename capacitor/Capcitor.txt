@@ -45,6 +45,11 @@ PS C:\Users\ajith\Capacitor\Work_Space\basron-wspace>ng add @capacitor/angular -
 ng build --project=basron-app-ui
 
 npm i @capacitor/android 
+npm install @capacitor/cli @capacitor/core
+npx cap init
+npm run build
+npx cap copy
+npx cap open android
 
 
 add browser
