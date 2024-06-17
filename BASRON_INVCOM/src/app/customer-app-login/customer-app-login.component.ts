@@ -15,8 +15,9 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-customer-app-login',
   standalone: true,
-  imports: [HttpClientModule,
-   CommonModule,
+  imports: 
+   [HttpClientModule,
+    CommonModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
@@ -25,7 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
     ButtonModule,ToastModule,
     CardModule,
     MatIconModule
-  ],
+   ],
   templateUrl: './customer-app-login.component.html',
   styleUrl: './customer-app-login.component.css'
 })

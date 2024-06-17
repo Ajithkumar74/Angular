@@ -10,7 +10,10 @@ import { BrowserModule } from '@angular/platform-browser';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HttpClientModule,ToastModule,CommonModule,
+  imports: [RouterOutlet,
+            HttpClientModule,
+            ToastModule,
+            CommonModule,
           
   ],
   templateUrl: './app.component.html',

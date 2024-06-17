@@ -13,6 +13,7 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import {  HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
+import { phoneLengthValidator } from '../shared/phoneLengthValidator';
 
 
 
@@ -39,7 +40,7 @@ export class CustomerAppSignupComponent {
 
   registerForm = this.fb.group({
     email: ['',[Validators.required,Validators.email]],
-    phone: ['',[Validators.required, Validators.pattern('^\\+\\d{1,3}\\d{10}$')]],
+    phone: ['',[Validators.required, Validators.pattern('^\\+\\d{1,2}\\d{10}$')]],
     password: ['',Validators.required],
     repeatPassword: ['',Validators.required]
   },{
@@ -79,22 +80,25 @@ export class CustomerAppSignupComponent {
   }
 
   submitDetails(){
+    if(this.registerForm.valid){
 
-     const postData = { ...this.registerForm.value };
-     delete postData.repeatPassword;
-    this.authService.registerUser(postData as User).subscribe(
-      response=>{
-        console.log(response);
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Register successfully' });
-        this.router.navigate(['auth'])
-    },
-      error=>
-    {
-      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Something went wrong' });
-    }
-  )
     
+      const postData = { ...this.registerForm.value };
+      delete postData.repeatPassword;
+     this.authService.registerUser(postData as User).subscribe(
+       response=>{
+         console.log(response);
+         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Register to Enter OTP' });
+         this.router.navigate(['auth'])
+     },
+       error=>
+     {
+       this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Something went wrong' });
+     }
+   )
+     
+   }
   }
- 
+  
 }
 

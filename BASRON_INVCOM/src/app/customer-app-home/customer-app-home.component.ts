@@ -19,7 +19,7 @@ export class CustomerAppHomeComponent implements OnInit{
   }
 
   redirectToSignIn() {
-    this.router.navigate(['/customer']); // Assuming your signin component route is '/signin'
+    this.router.navigate(['/customer']); 
   }
 
 }

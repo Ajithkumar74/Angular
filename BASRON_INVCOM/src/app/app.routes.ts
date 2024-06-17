@@ -20,6 +20,7 @@ export const routes: Routes = [
         { path: 'admin-login', loadComponent: () => import('./customer-app-signin/admin-login/admin-app-login/admin-app-login.component').then(m => m.AdminAppLoginComponent) },
         { path: 'auth-admin', loadComponent: () => import('./customer-app-signin/admin-login/admin-app-authentication/admin-app-authentication.component').then(m => m.AdminAppAuthenticationComponent) },
         { path: 'auth-admin-login', loadComponent: () => import('./customer-app-signin/admin-login/admin-app-authentication-login/admin-app-authentication-login.component').then(m => m.AdminAppAuthenticationLoginComponent) },
+        { path: 'admin-signup', loadComponent: () => import('./customer-app-signin/admin-login/admin-app-signup/admin-app-signup.component').then(m => m.AdminAppSignupComponent) },
 
 
 

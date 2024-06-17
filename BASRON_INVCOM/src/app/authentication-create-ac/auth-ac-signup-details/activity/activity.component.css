@@ -6,8 +6,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 430px;
+    height: 932px;
 }
+
 .container {
     background-color: white;
     width: 375px;
@@ -15,34 +17,86 @@ body {
     border-radius: 8px;
     overflow: hidden;
 }
+
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    text-align: center;
     background-color: #ffffff;
 }
-.header h2 {
-    color: #4e2aff;
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h6 {
     margin: 0;
+    color: #3A2EBA;
+    font-family: Inter;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 38.73px;
+    text-align: left;
 }
-.header p {
-    color: #888;
-    margin: 5px 0 0 0;
+
+ p {
+    margin: 0;
+    color: #000000;
+    font-family: Inter;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 13px;
+    text-align: left;
 }
-.icon {
-    display: inline-block;
-    margin-top: 10px;
+
+.profile-icon {
+    display: flex;
+    align-items: center;
 }
-.icon img {
+
+.profile-icon img {
     border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
+
+.header-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+.header2-icon {
+    display: flex;
+    align-items: center;
+}
+
+.header2-icon img  {
+    
+width: 32px;
+height: 32px;
+top: 158px;
+left: 304px;
+gap: 0px;
+opacity: 0px;
+
+}
+
 .content {
     padding: 20px;
 }
+
 .date-header {
     color: #4e2aff;
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .transaction {
     display: flex;
     align-items: center;
@@ -50,43 +104,54 @@ body {
     padding: 10px 0;
     border-bottom: 1px solid #f0f0f0;
 }
+
 .transaction:last-child {
     border-bottom: none;
 }
+
 .transaction-details {
     display: flex;
     align-items: center;
 }
+
 .transaction-details img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
 }
+
 .transaction-type {
     display: flex;
     flex-direction: column;
 }
+
 .transaction-type span {
     font-size: 14px;
     color: #333;
 }
+
 .transaction-type small {
     font-size: 12px;
     color: #888;
 }
+
 .amount {
     font-weight: bold;
     font-size: 16px;
 }
+
 .amount.positive {
     color: #4CAF50;
 }
+
 .amount.negative {
     color: #FF5722;
 }
+
 .amount.neutral {
     color: #000000;
 }
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -95,6 +160,7 @@ body {
     border-top: 1px solid #f0f0f0;
     background-color: #ffffff;
 }
+
 .footer img {
     width: 24px;
     height: 24px;

@@ -7,6 +7,7 @@ import {  provideClientHydration } from '@angular/platform-browser';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,7 +17,7 @@ export const appConfig: ApplicationConfig = {
   provideHttpClient(),
   MessageService,
   provideAnimations(),
-  ToastModule,
+  ToastModule, provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(),
 
   // importProvidersFrom([
   // //   provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
