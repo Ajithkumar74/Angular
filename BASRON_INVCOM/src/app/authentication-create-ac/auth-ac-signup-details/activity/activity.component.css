@@ -30,6 +30,18 @@ body {
     display: flex;
     flex-direction: column;
 }
+.headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.headers-text {
+    display: flex;
+    flex-direction: column;
+}
 
 .header h6 {
     margin: 0;
@@ -76,6 +88,18 @@ body {
     align-items: center;
 }
 
+.header2-icon {
+    display: flex;
+    align-items: center;
+}
+.tune{
+ 
+
+}
+
+.calender{
+    
+}
 .header2-icon img  {
     
 width: 32px;
@@ -95,6 +119,7 @@ opacity: 0px;
     color: #4e2aff;
     font-weight: bold;
     margin-bottom: 10px;
+    font-size: larger;
 }
 
 .transaction {
