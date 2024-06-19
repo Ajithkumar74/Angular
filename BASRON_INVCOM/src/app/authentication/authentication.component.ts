@@ -9,11 +9,10 @@ import { Router } from '@angular/router';
   styleUrl: './authentication.component.css'
 })
 export class AuthenticationComponent {
-  
-     constructor(private router:Router){}
+  constructor(private router:Router){}
 
 
-     onCodeEntered(){
-        this.router.navigate(['auth-create']);
-      } 
-  }
+  onCodeEntered(){
+     this.router.navigate(['auth-create']);
+   }
+}

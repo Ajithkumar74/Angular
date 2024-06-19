@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Validators, FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { MessageService } from 'primeng/api';
-import { AuthService } from '../../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,7 +9,8 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
-import { AppRoutingModule } from '../../../app-routing/app-routing.module';
+import { AppRoutingModule } from '../../app-routing/app-routing.module';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-admin-app-login',
@@ -34,7 +34,9 @@ export class AdminAppLoginComponent {
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required]
   })
-
+  Backonauth() {
+    this.router.navigate(['admin']);
+  }
 
 
   constructor(
@@ -51,22 +53,26 @@ export class AdminAppLoginComponent {
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
   }
-  loginUser() {
+  AdminLogin() {
     const { email, password } = this.loginForm.value;
-    this.authService.getUserByEmail(email as string).subscribe(
+    this.authService.getAdminByEmail(email as string).subscribe(
       response => {
-        if (response.length > 0 && response[0].password === password) {
-          sessionStorage.setItem('email', email as string);
-          this.router.navigate(['/auth-admin']);
+         if (response.length > 0) {
+          const admin=response[0];
+          if (admin.email === email && admin.password === password) {
+            sessionStorage.setItem('email', email as string);
+            this.router.navigate(['/auth-admin-login']);
+          } else {
+            this.msgService.add({ severity: 'error', summary: 'Error', detail: 'Email, password, or role is incorrect' });
+          }
         } else {
-          this.msgService.add({ severity: 'error', summary: 'Error', detail: 'email or password is wrong' });
+          this.msgService.add({ severity: 'error', summary: 'Error', detail: 'Email or password is incorrect' });
         }
       },
       error => {
         this.msgService.add({ severity: 'error', summary: 'Error', detail: 'Something went wrong' });
       }
-
-    )
+    );
   }
  
 }

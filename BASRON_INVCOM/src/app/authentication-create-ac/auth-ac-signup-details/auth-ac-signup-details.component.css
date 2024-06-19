@@ -56,15 +56,17 @@
   }
   
   .back-button {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
+    background: #3A2EBA;
+    size-adjust: left;
   }
   
   .create-account {
-    font-weight: 700;
     font-size: 19px;
-    line-height: 24px;
+    font-weight: 500;    
     color: #FFFFFF;
+    flex-grow: 1;
     text-align: center;
     flex-grow: 1;
   }

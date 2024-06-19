@@ -15,5 +15,4 @@ export class AuthenticationLoginComponent {
   onCodeEntered(){
      this.router.navigate(['auth-login-auth']);
    } 
-
 }

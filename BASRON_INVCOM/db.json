@@ -1,64 +1,24 @@
 {
   "users": [
     {
-      "id": "5ff9",
-      "email": "ajithrj23@gmail.com",
-      "phone": "8790678945",
+      "id": "9627",
+      "email": "ajithaj678@gmail.com",
+      "phone": "9080648479",
       "password": "12345"
-    },
+    }
+  ],
+  "admin": [
     {
-      "id": "dab9",
-      "email": "asdfgh@gmail.com",
-      "phone": "+919148627752",
+      "id": "b8a8",
+      "email": "ajith3456790@gmail.com",
+      "phone": "9789568679",
       "password": "1234"
     },
     {
-      "id": "c31b",
-      "email": "atest@gmail.com",
-      "phone": "+919148627752",
-      "password": "1234"
-    },
-    {
-      "id": "6825",
-      "email": "test@gmail.com",
-      "phone": "+918906789454",
-      "password": "1256"
-    },
-    {
-      "id": "bc7c",
-      "email": "test1@gmail.com",
-      "phone": "+919789678956",
-      "password": "1235"
-    },
-    {
-      "id": "878f",
-      "email": "testn@gmail.com",
-      "phone": "+919343915327",
-      "password": "156"
-    },
-    {
-      "id": "c331",
-      "email": "ajithahh7@gmail.com",
-      "phone": "+916789678990",
-      "password": "1236"
-    },
-    {
-      "id": "daff",
-      "email": "ajitaj24190@gmail.com",
-      "phone": "+916789067890",
-      "password": "1256"
-    },
-    {
-      "id": "245f",
-      "email": "ajith23@gmail.com",
-      "phone": "+919148627752",
-      "password": "12345"
-    },
-    {
-      "id": "e0b4",
-      "email": "aji4567@gmail.com",
-      "phone": "+919343915327",
-      "password": "1234"
+      "id": "7ceb",
+      "email": "asdfgh567@gmail.com",
+      "phone": "4569794209",
+      "password": "123"
     }
   ]
 }

@@ -2,32 +2,30 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'app-authentication-login-auth',
+  selector: 'app-admin-app-authentication-login',
   standalone: true,
-  imports: [CommonModule,FormsModule,ButtonModule],
-  templateUrl: './authentication-login-auth.component.html',
-  styleUrl: './authentication-login-auth.component.css'
+  imports: [CommonModule,FormsModule],
+  templateUrl: './admin-app-authentication-login.component.html',
+  styleUrl: './admin-app-authentication-login.component.css'
 })
-export class AuthenticationLoginAuthComponent {
-
+export class AdminAppAuthenticationLoginComponent {
+  constructor(private router:Router){}
   otp: string[] = ['', '', '', '', '', ''];
-  isOtpComplete = false;
+  isOtpComplete: boolean = false;
 
-  constructor(private router: Router) {}
 
   checkOtp() {
     this.isOtpComplete = this.otp.every(char => char !== '');
   }
-  onCodeEntered(){
-    if (this.isOtpComplete) {
 
+    
+
+  onCodeEntered(){
      this.router.navigate(['activity']);
    } 
-  }
-  moveToNext(event: any, index: number) {
+   moveToNext(event: any, index: number) {
     if (event.target.value.length === 1 && index < 5) {
       document.getElementById(`otp${index + 1}`)?.focus();
     }

@@ -10,7 +10,7 @@
 <div class="app-customer-persona">
     <div class="rectangle-3"></div>
     <div class="top-bar">
-      <div class="back-button"><img src="assets/images/back-button-icon.png" alt="Back Icon" width="24" height="24">      </div>
+      <div class="back-button" ><img src="assets/images/back-button-icon.png" (click)="Backonauth()" alt="Back Icon" width="24" height="24">      </div>
       <h1 class="create-account">Create Account</h1>
     </div>
     <h2 class="sign-up" (click)="onActivity()">Sign up with your details</h2>
@@ -29,7 +29,7 @@
     </p>
     <p class="time-text">It should take about 5 minutes to answer all the questions.</p>
     <div class="primary-button">
-      <span class="button-text">Get Started</span>
+      <span class="button-text" (click)="onActivity()">Get Started</span>
     </div>
     <div class="progress-bar">
       <div class="progress-step complete"></div>
