@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Details - BASRON</title>
+</head>
+<body>
+    <div class="app-customer-persona">
+        <div class="rectangle-3"></div>
+        <div class="top-bar">
+            <div class="back-button">
+                <img src="assets/images/back-button-icon.png" (click)="Backonauth()" alt="Back Icon" width="24" height="24">
+            </div>
+            <h1 class="create-account">Create Account</h1>
+            
+        </div>
+        <div class="progress-bar">
+            <div class="progress-step complete"></div>
+            <div class="progress-step complete"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+            <div class="progress-step"></div>
+        </div>
+        <div class="progress-labels">
+            <span class="label profile" (click)="ProfileTo()">Profile</span>
+            <span class="label" (click)="ContactTo()">Contact</span>
+            <span class="label" (click)="PersonalTo()">Personal</span>
+            <span class="label" (click)="FinancesTo()">Finances</span>
+            <span class="label" (click)="PreferencesTo()">Preferences</span>
+            <span class="label" (click)="AccountTo()">Account</span>
+        </div>
+  <div class="container">
+    <form [formGroup]="contactForm" (ngSubmit)="submitDetails()">
+      <p-card header="Contact Details" [style]="{ width: '360px' }">
+        <div class="field">
+          <input type="text" pInputText formControlName="phoneNumber" class="w-full" placeholder="Phone Number" />
+          <small *ngIf="phoneNumber?.invalid && (phoneNumber?.dirty || phoneNumber?.touched)" class="block p-error">
+            <div *ngIf="phoneNumber?.errors?.['required']">Phone number is required.</div>
+            <div *ngIf="phoneNumber?.errors?.['pattern']">Phone number must be valid.</div>
+          </small>
+        </div>
+        <div class="field">
+          <input type="text" pInputText formControlName="address" class="w-full" placeholder="Address" />
+          <small *ngIf="address?.invalid && (address?.dirty || address?.touched)" class="block p-error">
+            <div *ngIf="address?.errors?.['required']">Address is required.</div>
+          </small>
+        </div>
+        <div class="field">
+          <input type="text" pInputText formControlName="city" class="w-full" placeholder="City" />
+          <small *ngIf="city?.invalid && (city?.dirty || city?.touched)" class="block p-error">
+            <div *ngIf="city?.errors?.['required']">City is required.</div>
+          </small>
+        </div>
+        <div class="field">
+          <input type="text" pInputText formControlName="state" class="w-full" placeholder="State" />
+          <small *ngIf="state?.invalid && (state?.dirty || state?.touched)" class="block p-error">
+            <div *ngIf="state?.errors?.['required']">State is required.</div>
+          </small>
+        </div>
+        <div class="field">
+          <input type="text" pInputText formControlName="zipCode" class="w-full" placeholder="Zip Code" />
+          <small *ngIf="zipCode?.invalid && (zipCode?.dirty || zipCode?.touched)" class="block p-error">
+            <div *ngIf="zipCode?.errors?.['required']">Zip Code is required.</div>
+            <div *ngIf="zipCode?.errors?.['pattern']">Zip Code must be valid.</div>
+          </small>
+        </div>
+        <p-button label="Submit" styleClass="w-full" [disabled]="contactForm.invalid" type="submit"></p-button>
+        <br>
+        <div class="back-forget">
+        <div class="back-button">
+          <a (click)="Backonauth()">
+            <span class="material-icons">arrow_back</span>
+          </a>
+          </div>
+        </div>
+      </p-card>
+    </form>
+  </div>
+    </div>
+</body>
+</html>

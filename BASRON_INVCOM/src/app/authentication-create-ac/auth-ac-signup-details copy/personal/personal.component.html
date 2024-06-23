@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profession and Nationality - BASRON</title>
+</head>
+<body>
+  <div class="app-customer-persona">
+    <div class="rectangle-3"></div>
+    <div class="top-bar">
+      <div class="back-button">
+        <img src="assets/images/back-button-icon.png" (click)="Backonauth()" alt="Back Icon" width="24" height="24">
+      </div>
+      <h1 class="create-account">Create Account</h1>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step"></div>
+      <div class="progress-step"></div>
+      <div class="progress-step"></div>
+    </div>
+    <div class="progress-labels">
+        <span class="label profile" (click)="ProfileTo()">Profile</span>
+        <span class="label" (click)="ContactTo()">Contact</span>
+        <span class="label" (click)="PersonalTo()">Personal</span>
+        <span class="label" (click)="FinancesTo()">Finances</span>
+        <span class="label" (click)="PreferencesTo()">Preferences</span>
+        <span class="label" (click)="AccountTo()">Account</span>
+    </div>
+    <div class="container">
+      <form [formGroup]="professionNationalityForm" (ngSubmit)="submitDetails()">
+        <p-card header="Profession and Nationality" [style]="{ width: '360px' }">
+          <div class="field">
+            <input type="text" pInputText formControlName="profession" class="w-full" placeholder="Profession" />
+            <small *ngIf="profession?.invalid && (profession?.dirty || profession?.touched)" class="block p-error">
+              <div *ngIf="profession?.errors?.['required']">Profession is required.</div>
+            </small>
+          </div>
+          <div class="field">
+            <input type="text" pInputText formControlName="nationality" class="w-full" placeholder="Nationality" />
+            <small *ngIf="nationality?.invalid && (nationality?.dirty || nationality?.touched)" class="block p-error">
+              <div *ngIf="nationality?.errors?.['required']">Nationality is required.</div>
+            </small>
+          </div>
+          <p-button label="Submit" styleClass="w-full" [disabled]="professionNationalityForm.invalid" type="submit"></p-button>
+          <br>
+          <div class="back-button">
+            <a (click)="Backonauth()">
+              <span class="material-icons">arrow_back</span>
+            </a>
+          </div>
+        </p-card>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

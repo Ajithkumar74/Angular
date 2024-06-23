@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finances - BASRON</title>
+</head>
+<body>
+  <div class="app-customer-persona">
+    <div class="rectangle-3"></div>
+    <div class="top-bar">
+      <div class="back-button">
+        <img src="assets/images/back-button-icon.png" (click)="Backonauth()" alt="Back Icon" width="24" height="24">
+      </div>
+      <h1 class="create-account">Create Account</h1>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step"></div>
+      <div class="progress-step"></div>
+    </div>
+    <div class="progress-labels">
+        <span class="label profile" (click)="ProfileTo()">Profile</span>
+        <span class="label" (click)="ContactTo()">Contact</span>
+        <span class="label" (click)="PersonalTo()">Personal</span>
+        <span class="label" (click)="FinancesTo()">Finances</span>
+        <span class="label" (click)="PreferencesTo()">Preferences</span>
+        <span class="label" (click)="AccountTo()">Account</span>
+    </div>
+    <div class="container">
+      <form [formGroup]="financesForm" (ngSubmit)="submitDetails()">
+        <p-card header="Financial Details" [style]="{ width: '360px' }">
+          <div class="field">
+            <input type="text" pInputText formControlName="annualIncome" class="w-full" placeholder="Annual Income" />
+            <small *ngIf="annualIncome?.invalid && (annualIncome?.dirty || annualIncome?.touched)" class="block p-error">
+              <div *ngIf="annualIncome?.errors?.['required']">Annual Income is required.</div>
+              <div *ngIf="annualIncome?.errors?.['pattern']">Enter a valid amount.</div>
+            </small>
+          </div>
+          <div class="field">
+            <input type="text" pInputText formControlName="netWorth" class="w-full" placeholder="Net Worth" />
+            <small *ngIf="netWorth?.invalid && (netWorth?.dirty || netWorth?.touched)" class="block p-error">
+              <div *ngIf="netWorth?.errors?.['required']">Net Worth is required.</div>
+              <div *ngIf="netWorth?.errors?.['pattern']">Enter a valid amount.</div>
+            </small>
+          </div>
+          <div class="field">
+            <input type="text" pInputText formControlName="investmentExperience" class="w-full" placeholder="Investment Experience" />
+            <small *ngIf="investmentExperience?.invalid && (investmentExperience?.dirty || investmentExperience?.touched)" class="block p-error">
+              <div *ngIf="investmentExperience?.errors?.['required']">Investment Experience is required.</div>
+            </small>
+          </div>
+          <p-button label="Submit" styleClass="w-full" [disabled]="financesForm.invalid" type="submit"></p-button>
+          <br>
+          <div class="back-button">
+            <a (click)="Backonauth()">
+              <span class="material-icons">arrow_back</span>
+            </a>
+          </div>
+        </p-card>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

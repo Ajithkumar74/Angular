@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Overpass', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F0F0F0; /* light grey background to see centering more clearly */
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .app-customer-persona {
+    position: relative;
+    width: 430px;
+    height: 932px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .rectangle-3 {
+    position: absolute;
+    width: 430px;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+    background: #3A2EBA;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .top-bar {
+    position: absolute;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    top: 20px;
+  }
+  
+  .back-button {
+    width: 30px;
+    height: 30px;
+    background: #3A2EBA;
+    size-adjust: left;
+    cursor: pointer;
+  }
+  
+  .create-account {
+    font-size: 19px;
+    font-weight: 500;    
+    color: #FFFFFF;
+    flex-grow: 1;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .sign-up {
+    position: absolute;
+    width: 277px;
+    height: 30px;
+    left: calc(50% - 277px / 2 - 50.5px);
+    top: 214px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+  }
+  
+  .help-text,
+  .additional-text,
+  .time-text {
+    position: absolute;
+    width: 382px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #848998;
+  }
+  
+  .help-text {
+    top: 264px;
+    left: 28px;
+  }
+  
+  .additional-text {
+    top: 402px;
+    left: 28px;
+  }
+  
+  .time-text {
+    top: 536px;
+    left: 28px;
+  }
+  
+  .details,
+  .additional-details {
+    position: absolute;
+    width: 382px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+  }
+  
+  .details {
+    top: 295px;
+    left: 28px;
+  }
+  
+  .additional-details {
+    top: 453px;
+    left: 28px;
+  }
+  
+  .primary-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px;
+    position: absolute;
+    width: 390px;
+    height: 52px;
+    left: calc(50% - 390px / 2);
+    top: 840px;
+    background: #3A2EBA;
+    border: 1px solid #3A2EBA;
+    border-radius: 5px;
+  }
+  
+  .button-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    width: 342px;
+    left: 45px;
+    top: 159px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .progress-step {
+    width: 15px;
+    height: 14px;
+    background: #FFFFFF;
+    border: 2px solid #E4E4E4;
+    border-radius: 50%;
+  }
+  
+  .progress-step.complete {
+    background: #91C60F;
+    border-color: #91C60F;
+  }
+  
+  .progress-labels {
+    position: absolute;
+    width: 342px;
+    left: 45px;
+    top: 172px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .label {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    color: #848998;
+  }
+  
+  .label.profile {
+    color: #313544;
+  }
+  

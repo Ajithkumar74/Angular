@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Summary - BASRON</title>
+</head>
+<body>
+  <div class="app-customer-persona">
+    <div class="rectangle-3"></div>
+    <div class="top-bar">
+      <div class="back-button">
+        <img src="assets/images/back-button-icon.png" (click)="Backonauth()" alt="Back Icon" width="24" height="24">
+      </div>
+      <h1 class="create-account">Create Account</h1>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+      <div class="progress-step complete"></div>
+    </div>
+    <div class="progress-labels">
+      <span class="label profile" (click)="ProfileTo()">Profile</span>
+      <span class="label" (click)="ContactTo()">Contact</span>
+      <span class="label" (click)="PersonalTo()">Personal</span>
+      <span class="label" (click)="FinancesTo()">Finances</span>
+      <span class="label" (click)="PreferencesTo()">Preferences</span>
+      <span class="label" (click)="AccountTo()">Account</span>
+    </div>
+    <div class="container">
+      <div class="profile-section">
+        <h6>Profile Information</h6>
+        <p><strong>Name:</strong> {{ profileData?.profileName }}</p>
+        <p><strong>Date of Birth:</strong> {{ profileData?.dob }}</p>
+      </div>
+      <hr>
+      <div class="contact-section">
+        <h6>Contact Information</h6>
+        <p><strong>Phone Number:</strong> {{ contactData?.phoneNumber }}</p>
+        <p><strong>Address:</strong> {{ contactData?.address }}</p>
+        <p><strong>City:</strong> {{ contactData?.city }}</p>
+        <p><strong>State:</strong> {{ contactData?.state }}</p>
+        <p><strong>Zip Code:</strong> {{ contactData?.zipCode }}</p>
+      </div>
+      <hr>
+      <div class="personal-section">
+        <h6>Personal Information</h6>
+        <p><strong>Profession:</strong> {{ personalData?.profession }}</p>
+        <p><strong>Nationality:</strong> {{ personalData?.nationality }}</p>
+      </div>
+      <hr>
+      <div class="finances-section">
+        <h6>Finances</h6>
+        <p><strong>Income:</strong> {{ financesData?.income }}</p>
+        <p><strong>Expenditure:</strong> {{ financesData?.expenditure }}</p>
+      </div>
+      <hr>
+      <div class="preferences-section">
+        <h6>Preferences</h6>
+        <p><strong>Investment Goals:</strong> {{ preferencesData?.investmentGoals }}</p>
+        <p><strong>Risk Appetite:</strong> {{ preferencesData?.riskAppetite }}</p>
+        <p><strong>Industry Preferences:</strong> {{ preferencesData?.industryPreferences }}</p>
+      </div>
+      <br>
+      <p-button label="Submit" styleClass="w-full" type="submit" (click)="navigateTo()"></p-button>
+      <br>
+      <div class="back-button">
+        <a (click)="Backonauth()">
+          <span class="material-icons">arrow_back</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
